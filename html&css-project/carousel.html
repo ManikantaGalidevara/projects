@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.youtube-container {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.youtube-player {
+    display: block;
+    margin: 20px auto;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: hand;
+    cursor: pointer;
+    display: block;
+}
+
+img.youtube-thumbnail {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+}
+
+div.youtube-play-btn {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("https://freepngimg.com/thumb/categories/1398.png") no-repeat center center;
+  background-size: 72px 72px;
+}
+
+.youtube-iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="youtube-container">
+        <h2>With custom image</h2>
+        <div class="youtube-player" data-id="wQX8_nwylTY" data-thumbnail="https://jevelin.shufflehound.com/education/wp-content/uploads/sites/20/2018/06/michael-shannon-567440-unsplash.jpg"></div>
+    </div>
+    <script>
+        (function () {
+    getVideos();
+})();
+
+function getVideos() {
+    var v = document.getElementsByClassName("youtube-player");
+    for (var n = 0; n < v.length; n++) {
+        var p = document.createElement("div");
+        var id = v[n].getAttribute("data-id");
+
+        var placeholder = v[n].hasAttribute("data-thumbnail")
+            ? v[n].getAttribute("data-thumbnail")
+            : "";
+
+        if (placeholder.length) p.innerHTML = createCustomThumbail(placeholder);
+        else p.innerHTML = createThumbail(id);
+
+        v[n].appendChild(p);
+        p.addEventListener("click", function () {
+            var parent = this.parentNode;
+            createIframe(parent, parent.getAttribute("data-id"));
+        });
+    }
+}
+
+function createCustomThumbail(url) {
+    return (
+        '<img class="youtube-thumbnail" src="' +
+        url +
+        '" alt="Youtube Preview" /><div class="youtube-play-btn"></div>'
+    );
+}
+
+function createThumbail(id) {
+    return (
+        '<img class="youtube-thumbnail" src="//i.ytimg.com/vi_webp/' +
+        id +
+        '/maxresdefault.webp" alt="Youtube Preview"><div class="youtube-play-btn"></div>'
+    );
+}
+
+
+function createIframe(v, id) {
+    var iframe = document.createElement("iframe");
+    console.log(v);
+    iframe.setAttribute(
+        "src",
+        "//www.youtube.com/embed/" +
+            id +
+            "?autoplay=1&color=white&autohide=2&modestbranding=1&border=0&wmode=opaque&enablejsapi=1&showinfo=0&rel=0"
+    );
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("class", "youtube-iframe");
+    v.firstChild.replaceWith(iframe);
+}
+
+
+$("#video-modal").on("hidden.bs.modal", function (e) {
+    $(this).find("iframe").remove();
+});
+
+$("#video-modal").on("show.bs.modal", function (e) {
+    getVideos();
+});
+    </script>
+</body>
+</html>

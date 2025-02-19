@@ -1,0 +1,368 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.section3, .section4, .section5, .section6, .section7, .section8, .section9, .section9, .section10, .section11, .section12, .section13{
+    height: 100vh;
+    border: 1px solid red;
+    
+}
+.total3{
+    background-image: url(Screenshot\ 2025-02-10\ 232713.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    position: relative;
+    z-index: -10;
+} 
+/* Default Section */
+.section1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 1%;
+    padding-left: 11%;
+    padding-right: 10%;
+    height: 12vh;
+    position: relative;
+    /* background: yellowgreen; */
+}
+
+.icons2 {
+    display: flex;
+    gap: 6%;
+    justify-content: end;
+    width: 100%;
+}
+
+.call {
+    display: flex;
+    gap: 7%;
+    align-items: center;
+    width: 22%;
+}
+
+.call i {
+    font-size: 2.2rem;
+    color: orangered;
+}
+
+#cali {
+    padding-bottom: 1%;
+}
+
+/* Sidebar Toggle Button */
+
+#show {
+    font-size: 1.4rem;
+    justify-content: start;
+    float: right;
+    font-weight: 900;
+    display: none;
+    cursor: pointer;
+    /* background: #f07a7a; */
+    width: 45%;
+    position: none;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    font-size: 1rem;
+    padding: 1%;
+    background: #000000;
+    align-items: center;
+    list-style: none;
+    line-height: 1.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    text-align: center;
+    z-index: 99;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: rgb(168, 167, 167);
+}
+
+.sidebar a:hover {
+    color: whitesmoke;
+}
+
+/* Section 2 Styling */
+.section2 {
+    margin-top: 1%;
+    position: sticky;
+    top: 0%;
+    /* box-shadow: 0px 0px 15px; */
+}
+
+.navbar2 ul {
+    display: flex;
+    list-style: none;
+    gap: 3%;
+    width: 140%;
+    background: greenyellow;
+}
+.navbar2 ul li{
+    background: #ef8b8b;
+    width: 50%;
+}
+.navbar2 li:nth-last-child(3){
+    width: 200%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 9.2%;
+    margin-right: 9.2%;
+    background-color: rgb(255, 255, 255);
+    padding-right: 1%;
+    padding-left: 1.8%;
+    height: 10vh;
+    align-items: center;
+}
+
+.navicons {
+    display: flex;
+    gap: 5%;
+    font-size: 1.3rem;
+    width: 20%;
+    align-items: center;
+    background: purple;
+}
+
+.navicons i {
+    width: 35%;
+    text-align: center;
+    background: palevioletred;
+}
+
+/* SECTION-->3 STYLING */
+
+.slidegirl{
+    width: 23%;
+    height:  100vh;
+    margin-left: 3.6%;
+    margin-top: 1.2%;
+}
+.slidegirl img{
+    width: 100%;
+    height: 100%;
+}
+.center{
+    text-align: center;
+    width: 40%;
+    padding-top: 16%;
+    margin-left: 0.5%;
+    
+}
+.center p{
+    letter-spacing: 0.4rem;
+    font-size: 1.2rem;
+    color: orangered;
+    padding: 1%;
+}
+.center h1{
+    font-size: 4rem;
+    text-align: center;
+    word-spacing: 1rem;
+    padding: 1%;
+}
+.zindex{
+    position: absolute;
+    top: 1%;
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    gap:3.2%;
+    padding: 0%;
+    justify-content: space-between;
+}
+.center2{
+    width: 4%;
+    height: 75vh;
+    margin-top: 13%;
+    background: #9e9d9e;
+    margin-left: 1.1%;
+    border: none;
+    border-radius: 5px;
+
+}
+.center2 img{
+    width: 100%;
+    height: 100%;
+    color: #9e9d9e;
+    border-radius: 5px;
+}
+.bgbook{
+    width: 17%;
+    height: 75vh;
+    margin-top: 13%;
+    float: right;
+    margin-right: 0%;
+}
+.bgbook img{
+    width: 100%;
+    height: 100%;
+}
+/* SECTION --4 STYLING STARTED HERE */
+
+.section4{
+    width: 100%;
+}
+.study{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3.2%;
+    padding: 0%;
+    padding: 0% 10%;
+    
+}
+.read{
+    width: 100%;
+    height: 60vh;
+}
+.read img{
+    width: 100%;
+    height: 100%;
+}
+#intro{
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 0.4rem;
+    color: gray;
+    margin: 1%;
+    margin-top: 7.5%;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-weight: 300;
+
+}
+#intro1{
+    text-align: center;
+    padding: 1.8% 20%;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    color: gray;
+    letter-spacing: 0.08rem;
+    
+}
+.section4 h1{
+    font-size: 2.2rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin-top: 1.5%;
+    
+}
+/* section --5 starting */
+.iframe{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2%;
+}
+.hover{
+    width: 100%;
+    height: 30vh;
+}
+.hover img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+.section12{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2%;
+    padding: 4% 0%;
+}
+.jevelin, .jevelin1{
+    width: 100%;
+    height: 80vh;
+}
+.jobs{
+    width: 20%;
+    height: 20vh;
+}
+.jobs img{
+    width: 100%;
+    height: 100%;
+}
+.jevelin1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.programs2{
+    width: 100%;
+    height: 30vh;
+}
+.programs2 img{
+    width: 100%;
+    height: 100%;
+}
+#matte{
+    font-size: 1rem;
+    padding: 1%;
+}
+.twitter{
+    font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+    html, body{
+        overflow: hidden;
+    }
+    .section1 {
+        width: 100%;
+    }
+    .section1 .icons2 {
+        display: none;
+    }
+    #show {
+        display: block;
+    }
+    .section2 {
+        display: none;
+    }
+    .zindex{
+        display: none;
+        flex-direction: column;
+        top: 20%;
+        /* overflow: hidden;
+        overflow: scroll; */
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 786px) {
+    .section1 {
+        width: 100%;
+    }
+    .section1 .icons2 {
+        display: none;
+    }
+    #show {
+        display: block;
+    }
+    .section2 {
+        display: none;
+    }
+}
